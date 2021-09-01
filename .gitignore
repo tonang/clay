@@ -1,0 +1,19 @@
+**/.sass-cache
+**/.sass-cache/*
+.sass-cache
+.sass-cache/*
+.DS_Store
+_/img/.DS_Store
+.eslintrc
+.stylelintrc.json
+package-lock.json
+package.json
+/config
+/src
+/node_modules
+
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
