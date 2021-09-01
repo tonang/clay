@@ -1,6 +1,60 @@
 {
-    "version": 1,
-    "settings": {},
-    "templateParts": [],
-    "customTemplates": []
+	"version": 1,
+	"settings": {
+		"color": {
+			"link": true,
+			"palette": [
+				{
+					"slug": "black",
+					"color": "#000",
+					"name": "Black"
+				},
+				{
+					"slug": "white",
+					"color": "#fff",
+					"name": "White"
+				},
+				{
+                    "slug": "brown",
+                    "color": "#b4ad9e",
+                    "name": "Brown"
+				},
+				{
+                    "slug": "gray",
+                    "color": "#626262",
+                    "name": "Gray"
+				}
+			],
+			"duotone": [],
+			"gradients": []
+		},
+		"typography": {
+			"customLineHeight": true,
+			"customFontSize": true,
+			"fontFamilies": [],
+			"fontSizes": []
+		},
+		"spacing": {
+			"customPadding": true,
+			"customMargin": true,
+			"units": [ "px", "em", "rem", "vh", "vw" ]
+		},
+		"layout": {
+			"contentSize": "840px",
+			"wideSize": "1140px",
+			"units": [ "px", "em", "rem", "%", "vw" ]
+		},
+		"border": {
+			"customColor": true,
+			"customRadius": true,
+			"customStyle": true,
+			"customWidth": true
+		}
+	},
+	"styles": {
+	},
+	"templateParts": [
+	],
+	"customTemplates": [
+	]
 }

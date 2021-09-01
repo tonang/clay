@@ -21,10 +21,31 @@ define( 'CLAY_THEME_IMAGE', CLAY_THEME_URL . '/assets/images' );
 
 /* Check if the WordPress version is 5.5 or higher, and if the PHP version is at least 7.2. If not do not activate */
 if ( version_compare( $GLOBALS['wp_version'], '5.5', '<' ) || version_compare( PHP_VERSION_ID, '70200', '<' ) ) {
-    require get_template_directory() . '/inc/back-compat.php';
+    require CLAY_THEME_PATH . '/inc/back-compat.php';
 
     return;
 }
 
 // Theme support.
 require_once 'classes/class-theme-support.php';
+
+// About page.
+require_once 'classes/class-aboutpage.php';
+
+// Block styles.
+require_once 'inc/block-styles.php';
+
+// Block patterns.
+require_once 'inc/block-patterns.php';
+
+// Block patterns - Header.
+require_once 'inc/block-patterns-header.php';
+
+// Block patterns - Footer
+require_once 'inc/block-patterns-footer.php';
+
+// Block patterns - Page layout
+require_once 'inc/block-patterns-page-layout.php';
+
+// Frontend
+require_once 'inc/frontend.php';
