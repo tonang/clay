@@ -2,6 +2,8 @@
 **/.sass-cache/*
 .sass-cache
 .sass-cache/*
+.cache
+.cache/
 .DS_Store
 _/img/.DS_Store
 .eslintrc
