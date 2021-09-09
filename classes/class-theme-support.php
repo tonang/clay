@@ -60,20 +60,20 @@ class Theme_Support {
 			]
 		);
 
-		// Add support for Block Styles.
-		add_theme_support( 'wp-block-styles' );
 		// Add support for align wide.
         add_theme_support( 'align-wide' );
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
         // Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
 		// Enqueue editor styles.
 		add_theme_support( 'editor-styles' );
-		add_editor_style(
-			array(
-				'./assets/css/editor.css',
-			)
-		);
+		add_editor_style('assets/css/editor.css');
+		add_theme_support( 'dark-editor-style' );
+		
+		// Remove the core block patterns
+		remove_theme_support( 'core-block-patterns' );
     }
 
 	/**
@@ -89,7 +89,7 @@ class Theme_Support {
 		// This variable is intended to be overruled from themes.
 		// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-		$GLOBALS['content_width'] = apply_filters( 'clay_content_width', 720 );
+		$GLOBALS['content_width'] = apply_filters( 'clay_content_width', 998 );
     }
 }
 

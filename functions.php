@@ -47,5 +47,8 @@ require_once 'inc/block-patterns-footer.php';
 // Block patterns - Page layout
 require_once 'inc/block-patterns-page-layout.php';
 
+// Enqueue gutenberg JS files to back-end editor.
+require_once 'inc/block-editor-assets.php';
+
 // Frontend
 require_once 'inc/frontend.php';

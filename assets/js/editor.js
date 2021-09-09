@@ -118,6 +118,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"editor.js":[function(require,module,exports) {
-
+// Unregister block type
+wp.domReady(function () {
+  wp.blocks.unregisterBlockType('core/media-text');
+  wp.blocks.unregisterBlockType('core/freeform');
+  wp.blocks.unregisterBlockType('core/preformatted');
+  wp.blocks.unregisterBlockType('core/pullquote');
+  wp.blocks.unregisterBlockType('core/table');
+  wp.blocks.unregisterBlockType('core/verse');
+  wp.blocks.unregisterBlockType('core/audio');
+  wp.blocks.unregisterBlockType('core/cover');
+  wp.blocks.unregisterBlockType('core/file');
+  wp.blocks.unregisterBlockType('core/calendar');
+  wp.blocks.unregisterBlockType('core/rss');
+});
 },{}]},{},["editor.js"], null)
 //# sourceMappingURL=/editor.js.map
