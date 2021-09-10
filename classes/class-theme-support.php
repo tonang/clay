@@ -23,7 +23,7 @@ class Theme_Support {
     */
     public function __construct(){
         add_action( 'after_setup_theme', [ $this, 'action_setup' ] );
-        add_action( 'after_setup_theme', [ $this, 'action_content_width' ] );
+        add_action( 'after_setup_theme', [ $this, 'action_content_width' ], 0 );
     }
 
     /**
@@ -68,9 +68,6 @@ class Theme_Support {
 		add_theme_support( 'responsive-embeds' );
 
 		// Enqueue editor styles.
-		add_theme_support( 'editor-styles' );
-		add_editor_style('assets/css/editor.css');
-		add_theme_support( 'dark-editor-style' );
 		
 		// Remove the core block patterns
 		remove_theme_support( 'core-block-patterns' );

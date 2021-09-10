@@ -328,18 +328,108 @@ template {
   margin-bottom: 0;
 }
 
-.has-space-top-small {
-  padding-top: 30px;
+.wp-site-blocks > * + * {
+  margin-top: 0;
 }
-.has-space-bottom-small {
-  padding-bottom: 30px;
+
+p {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
+
+:root {
+  --clay--content--size: "1170px";
+  --clay--wide--size: "90%";
+}
+
 body {
   background-color: var(--wp--preset--color--white);
+}
+
+.wp-block-columns.alignfull {
+  max-width: 90vw !important;
+}
+@media screen and (max-width: 1024px) {
+  .wp-block-columns.alignfull {
+    max-width: 100vw !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.has-space-top-small {
+  padding-top: 2.4rem;
+}
+.has-space-top-medium {
+  padding-top: 5rem;
+}
+.has-space-bottom-small {
+  padding-bottom: 2.4rem;
+}
+.has-space-bottom-medium {
+  padding-bottom: 5rem;
+}
+.site-header .wp-block-navigation-item__content:hover, .site-header .wp-block-navigation-item__content:focus {
+  opacity: 0.65;
+}
+@media screen and (max-width: 1024px) {
+  .site-header .wp-block-navigation__responsive-container {
+    align-items: flex-start;
+    bottom: 0;
+    display: none;
+    justify-content: flex-start;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+.site-header .wp-block-navigation__responsive-container.is-menu-open {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 24px;
+  z-index: 100000;
+}
+@media screen and (max-width: 1024px) {
+  .site-header .wp-block-navigation__responsive-container-open {
+    display: block;
+  }
+}
+@media screen and (max-width: 599px) {
+  .site-header .wp-block-column:first-child {
+    flex-basis: 80% !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  .site-header .wp-block-column:last-child {
+    flex-basis: 20% !important;
+  }
+}
+
+.editor-styles-wrapper .wp-site-blocks > * + * {
+  margin-top: 0 !important;
 }
 
 .editor-styles-wrapper {
   background-color: var(--wp--preset--color--white);
 }
 
-/*# sourceMappingURL=/editor.css.map */
+.wp-block[data-align=full] {
+  max-width: 90vw !important;
+}
+@media screen and (max-width: 1024px) {
+  .wp-block[data-align=full] {
+    max-width: 100vw !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*# sourceMappingURL=/editor-style.css.map */

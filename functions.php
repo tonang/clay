@@ -29,6 +29,9 @@ if ( version_compare( $GLOBALS['wp_version'], '5.5', '<' ) || version_compare( P
 // Theme support.
 require_once 'classes/class-theme-support.php';
 
+add_theme_support( 'editor-styles');
+add_editor_style( 'assets/css/editor-style.css' );
+
 // About page.
 require_once 'classes/class-aboutpage.php';
 

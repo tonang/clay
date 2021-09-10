@@ -13,7 +13,7 @@ function clay_enqueue_styles(){
 
 	wp_enqueue_style( 
 		'google-fonts',
-		'https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans:wght@400;700&display=swap', 
+		'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap', 
 		null, 
 		null 
 	);

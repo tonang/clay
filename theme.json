@@ -3,22 +3,61 @@
 	"settings": {
 		"color": {
 			"link": true,
-			"palette": [],
-			"duotone": [],
-			"gradients": []
+			"palette": [
+				{
+					"slug": "black",
+					"color": "#161616",
+					"name": "Black"
+				},
+				{
+					"slug": "white",
+					"color": "#fff",
+					"name": "White"
+				},
+				{
+					"slug": "gray",
+					"color": "#999",
+					"name": "Gray"
+				},
+				{
+					"slug": "gray-second",
+					"color": "#969696",
+					"name": "Gray Second"
+				},
+				{
+					"slug": "gray-dark",
+					"color": "#545454",
+					"name": "Gray Dark"
+				}
+			],
+			"duotone": [
+                {
+                    "colors": [ "#000", "#FFF" ],
+                    "slug": "black-and-white",
+                    "name": "Black and White"
+                }
+			],
+			"gradients": [
+                {
+                    "slug": "blush-bordeaux",
+                    "gradient": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+                    "name": "Blush bordeaux"
+                },
+                {
+                    "slug": "blush-light-purple",
+                    "gradient": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+                    "name": "Blush light purple"
+                }
+			]
 		},
 		"typography": {
-			"customFontStyle": true,
 			"customLineHeight": true,
-			"customTextDecorations": true,
-			"customTextTransforms": true,
 			"customFontSize": true,
-
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif",
-					"slug": "system-font",
-					"name": "System Font"
+					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+					"slug": "system-fonts",
+					"name": "System Fonts"
 				},
 				{
 					"fontFamily": "Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", Monaco, \"Courier New\", Courier, monospace",
@@ -30,28 +69,45 @@
 					"slug": "helvetica-arial"
 				},
 				{
-					"fontFamily": "Montserrat, sans-serif",
-					"name": "Montserrat",
-					"slug": "montserrat",
-					"google": "family=Montserrat:wght@400&display=swap"
-				},
-				{
-					"fontFamily": "PT Sans, sans-serif",
-					"name": "PT Sans",
-					"slug": "pt-sans",
-					"google": "family=PT+Sans:wght@300;400;500;700&display=swap"
+					"fontFamily": "\"Roboto\", sans-serif",
+					"slug": "roboto"
 				}
 			],
 			"fontSizes": [
 				{
-					"slug": "small",
-					"size": 12,
-					"name": "Small"
+					"slug": "logo",
+					"size": "1.8em",
+					"name": "Logo"
 				},
 				{
-					"slug": "normal",
-					"size": 16,
-					"name": "Normal"
+					"slug": "heading-1",
+					"size": "3.1em",
+					"name": "Heading One"
+				},
+				{
+					"slug": "heading-2",
+					"size": "2.6em",
+					"name": "Heading Two"
+				},
+				{
+					"slug": "text-large",
+					"size": "1.6em",
+					"name": "Text Large"
+				},
+				{
+					"slug": "text-default",
+					"size": "1.3em",
+					"name": "Text Default"
+				},
+				{
+					"slug": "text-small",
+					"size": "1.1em",
+					"name": "Text Small"
+				},
+				{
+					"slug": "navigation",
+					"size": "17px",
+					"name": "Navigation"
 				}
 			]
 		},
@@ -61,8 +117,8 @@
 			"units": [ "px", "em", "rem", "vh", "vw" ]
 		},
 		"layout": {
-			"contentSize": "998px",
-			"wideSize": "1140px",
+			"contentSize": "1170px",
+			"wideSize": "90%",
 			"units": [ "px", "em", "rem", "%", "vw" ]
 		},
 		"border": {
@@ -75,23 +131,38 @@
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--white)",
-			"text": "var(--wp--preset--color--black)"
+			"text": "var(--wp--preset--color--gray-dark)"
 		},
 		"typography": {
-			"fontSize": "16px",
-			"fontFamily": "var(--wp--preset--font-family--system-font)",
-			"lineHeight": "1.7"
+			"fontSize": "var(--wp--preset--font-size--text-default)",
+			"fontFamily": "var(--wp--preset--font-family--roboto)",
+			"lineHeight": "1.8em"
 		},
-		"spacing": {},
-		"elements": {},
-		"blocks": {
-			"core/paragraph": {
+		"spacing": {
+			"margin": {
+				"top": "0px",
+				"right": "0px",
+				"bottom": "0px",
+				"left": "0px"
+			}
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--black)"
+				}
+			},
+			"h1": {
+				"color": {
+					"text": "var(--wp--preset--color--gray-dark)"
+				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--normal)"
+					"fontSize": "var(--wp--preset--font-size--heading-1)"
 				}
 			}
-		}
+		},
+		"blocks": {}
 	},
-	"customTemplates": {},
-	"templateParts": {}
+	"templateParts": {},
+	"customTemplates": {}
 }
