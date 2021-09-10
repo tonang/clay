@@ -1,3 +1,6 @@
+/* ======================================================================== */
+/* 01. Reset */
+/* ======================================================================== */
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -337,15 +340,111 @@ p {
   margin-block-start: 0;
 }
 
+/* ======================================================================== */
+/* 02. Theme Root */
+/* ======================================================================== */
 :root {
   --clay--content--size: "1170px";
   --clay--wide--size: "90%";
 }
 
-body {
-  background-color: var(--wp--preset--color--white);
+/* ======================================================================== */
+/* 03. General */
+/* ======================================================================== */
+html {
+  font-size: var(--paragraph-max-font-size);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  -webkit-text-rendering: optimizeSpeed;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: none;
+  font-kerning: none;
 }
 
+body {
+  background-color: var(--wp--preset--color--white);
+  width: 100%;
+  word-wrap: break-word;
+  font-family: var(--wp--preset--font-family--roboto);
+  color: var(--wp--preset--color--gray-dark);
+}
+
+[class^=icon-]:before, [class*=" icon-"]:before {
+  cursor: inherit;
+}
+
+a {
+  text-decoration: none;
+  transition: ease 0.3s;
+  color: var(--wp--preset--color--gray);
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: var(--wp--preset--color--black);
+}
+
+/* ======================================================================== */
+/* 04. Typography */
+/* ======================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--wp--preset--font-family--roboto);
+  font-weight: bold;
+  color: var(--wp--preset--color-black);
+}
+
+p {
+  font-size: var(--wp--preset--font-size--text-default);
+  line-height: 1.8em;
+  letter-spacing: 0.04em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp {
+  font-family: Inconsolata, monospace;
+}
+
+pre {
+  font-family: Inconsolata, monospace;
+  font-size: 1rem;
+  line-height: 1.3125;
+  margin: 0 0 1.75em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 2em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: rgba(136, 136, 136, 0.1);
+}
+
+code,
+kbd {
+  background-color: rgba(136, 136, 136, 0.1);
+  padding: 0.125em 0.25em;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Custom gutenberg wrapper */
 .wp-block-columns.alignfull {
   max-width: 90vw !important;
 }
@@ -357,21 +456,33 @@ body {
   }
 }
 
-a {
-  text-decoration: none;
+ul, ol {
+  list-style-position: outside;
+  list-style-type: square;
+  margin: 0;
+  padding: 0 0 0 1rem;
 }
 
+/* ======================================================================== */
+/* 05. Helper - Space */
+/* ======================================================================== */
 .has-space-top-small {
-  padding-top: 2.4rem;
+  padding-top: 1.6rem;
 }
 .has-space-top-medium {
   padding-top: 5rem;
 }
 .has-space-bottom-small {
-  padding-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 .has-space-bottom-medium {
   padding-bottom: 5rem;
+}
+/* ======================================================================== */
+/* 06. Component - Site Header */
+/* ======================================================================== */
+.site-header .wp-block-navigation-item__content {
+  font-weight: bold;
 }
 .site-header .wp-block-navigation-item__content:hover, .site-header .wp-block-navigation-item__content:focus {
   opacity: 0.65;
