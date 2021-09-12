@@ -335,7 +335,13 @@ template {
   margin-top: 0;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-block-end: 0;
   margin-block-start: 0;
 }
@@ -522,6 +528,18 @@ ul, ol {
   .site-header .wp-block-column:last-child {
     flex-basis: 20% !important;
   }
+}
+
+/* ======================================================================== */
+/* 07. Component - Site Footer */
+/* ======================================================================== */
+.site-footer ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer a:hover, .site-footer a:focus {
+  color: var(--wp--preset--color--black) !important;
 }
 
 .editor-styles-wrapper .wp-site-blocks > * + * {

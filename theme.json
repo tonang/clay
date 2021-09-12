@@ -105,6 +105,11 @@
 					"name": "Text Small"
 				},
 				{
+					"slug": "text-smallest",
+					"size": "15px",
+					"name": "Text Smallest"
+				},
+				{
 					"slug": "navigation",
 					"size": "17px",
 					"name": "Navigation"
