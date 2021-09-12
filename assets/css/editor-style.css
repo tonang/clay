@@ -331,8 +331,9 @@ template {
   margin-bottom: 0;
 }
 
-.wp-site-blocks > * + * {
-  margin-top: 0;
+.wp-site-blocks > * + *,
+.wp-block-group > * + * {
+  margin-top: 0 !important;
 }
 
 p,
@@ -341,7 +342,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figure {
   margin-block-end: 0;
   margin-block-start: 0;
 }
@@ -406,7 +408,6 @@ h6 {
 p {
   font-size: var(--wp--preset--font-size--text-default);
   line-height: 1.8em;
-  letter-spacing: 0.04em;
 }
 
 code,
@@ -461,12 +462,62 @@ img {
     padding-right: 20px;
   }
 }
+.wp-block-columns.alignwide {
+  max-width: 1170px !important;
+}
 
 ul, ol {
   list-style-position: outside;
   list-style-type: square;
   margin: 0;
   padding: 0 0 0 1rem;
+}
+
+.wp-block-button__link {
+  display: inline-block;
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+  color: var(--wp--preset--color--white);
+  background-color: var(--wp--preset--color--gray);
+  padding: 1.4rem 2.5rem;
+  border-radius: 33px;
+  text-decoration: underline;
+}
+.wp-block-button__link:hover, .wp-block-button__link:focus {
+  text-decoration: none;
+}
+
+form p + p {
+  margin-top: 1rem;
+}
+form label .required {
+  color: red;
+}
+form input[type=text],
+form input[type=email],
+form input[type=url],
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+form input[type=text]:focus, form input[type=text]:active,
+form input[type=email]:focus,
+form input[type=email]:active,
+form input[type=url]:focus,
+form input[type=url]:active,
+form textarea:focus,
+form textarea:active {
+  outline: none;
+}
+
+.comment-form p label {
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+}
+.comment-form .form-submit {
+  margin-top: 1rem;
 }
 
 /* ======================================================================== */
@@ -538,8 +589,153 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
+.site-footer a {
+  text-decoration: underline;
+}
 .site-footer a:hover, .site-footer a:focus {
   color: var(--wp--preset--color--black) !important;
+  text-decoration: none;
+}
+
+/* ======================================================================== */
+/* 08. Component - Site Article */
+/* ======================================================================== */
+.site-article__featured-image.alignfull {
+  max-width: 100% !important;
+}
+.site-article__title {
+  margin-bottom: 1.6rem;
+}
+.site-article__meta {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.site-article__meta > div {
+  margin-left: 0.35rem;
+  padding-left: 0.35rem;
+  margin-right: 0.35rem;
+  padding-right: 0.35rem;
+  position: relative;
+}
+.site-article__meta > div:after {
+  content: "/";
+  position: absolute;
+  right: -8px;
+  color: var(--wp--preset--color--gray-second) !important;
+}
+.site-article__meta > div.site-article__meta-date {
+  padding-left: 0;
+  margin-left: 0;
+}
+.site-article__meta > div.site-article__meta-tags {
+  padding-right: 0;
+  margin-right: 0;
+}
+.site-article__meta > div.site-article__meta-tags:after {
+  display: none;
+}
+.site-article__meta > div.site-article__meta-author:after {
+  top: -4px;
+}
+.site-article__meta > div a:hover, .site-article__meta > div a:focus {
+  color: var(--wp--preset--color--gray-second) !important;
+}
+.site-article__meta .wp-block-post-author__name {
+  font-size: var(--wp--preset--font-size--text-smallest) !important;
+  font-weight: normal;
+  color: var(--wp--preset--color--gray-dark) !important;
+}
+.site-article__post {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.site-article__post a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.site-article__post a:hover, .site-article__post a:focus {
+  text-decoration: none;
+}
+
+.site-comment h2 {
+  margin-bottom: 1.6rem;
+}
+.site-comment .wp-block-post-comments h3 {
+  font-size: var(--wp--preset--font-size--text-small);
+}
+.site-comment .wp-block-post-comments .comment-meta {
+  margin-left: 0;
+}
+.site-comment .wp-block-post-comments .comment-author a {
+  color: var(--wp--preset--color--white);
+  text-decoration: underline;
+}
+.site-comment .wp-block-post-comments .comment-metadata {
+  font-size: var(--wp--preset--font-size--text-smallest);
+}
+.site-comment .wp-block-post-comments .comment-metadata a {
+  color: var(--wp--preset--color-white);
+}
+.site-comment .wp-block-post-comments .comment-content a {
+  color: var(--wp--preset--color-white);
+  text-decoration: underline;
+}
+.site-comment .wp-block-post-comments .comment-content a:hover, .site-comment .wp-block-post-comments .comment-content a:focus {
+  text-decoration: none;
+}
+.site-comment .wp-block-post-comments .comment-reply-link {
+  display: inline-block;
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+  color: var(--wp--preset--color--white);
+  background-color: var(--wp--preset--color--gray);
+  padding: 0.4rem 2.5rem;
+  border-radius: 33px;
+  text-decoration: underline;
+}
+.site-comment .wp-block-post-comments .comment-reply-link:hover, .site-comment .wp-block-post-comments .comment-reply-link:focus {
+  text-decoration: none;
+}
+.site-comment .wp-block-post-comments .comment-reply-title {
+  font-size: var(--wp--preset--font-size--navigation);
+}
+.site-comment .wp-block-post-comments .comment-reply-title a {
+  color: var(--wp--preset--color--white);
+  text-decoration: underline;
+}
+.site-comment .wp-block-post-comments .comment-reply-title a:hover, .site-comment .wp-block-post-comments .comment-reply-title a:focus {
+  text-decoration: none;
+}
+.site-comment .wp-block-post-comments .comment-reply-title small {
+  margin-left: 0.5rem;
+  position: relative;
+  font-size: 100%;
+}
+.site-comment .wp-block-post-comments .comment-reply-title small:before {
+  content: "-";
+  left: 0;
+  margin-right: 0.5rem;
+}
+.site-comment .wp-block-post-comments .comment-form .logged-in-as a {
+  font-size: var(--wp--preset--font-size--navigation);
+  color: var(--wp--preset--color--white);
+  text-decoration: underline;
+}
+.site-comment .wp-block-post-comments .comment-form .logged-in-as a:hover, .site-comment .wp-block-post-comments .comment-form .logged-in-as a:focus {
+  text-decoration: none;
+}
+.site-comment .wp-block-post-comments .comment-form .comment-notes {
+  font-size: var(--wp--preset--font-size--navigation);
+  color: var(--wp--preset--color--white);
+}
+.site-comment .wp-block-post-comments .comment-form .comment-notes .required {
+  color: red;
+}
+.site-comment .commentlist {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 
 .editor-styles-wrapper .wp-site-blocks > * + * {
