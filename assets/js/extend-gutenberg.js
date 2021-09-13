@@ -889,6 +889,9 @@ var addClassSpacingColumnsInspectorControl = createHigherOrderComponent(function
         label: __('Default', 'clay'),
         value: ''
       }, {
+        label: __('Smaller', 'clay'),
+        value: 'smaller'
+      }, {
         label: __('Small', 'clay'),
         value: 'small'
       }, {
@@ -909,6 +912,9 @@ var addClassSpacingColumnsInspectorControl = createHigherOrderComponent(function
       options: [{
         label: __('Default', 'clay'),
         value: ''
+      }, {
+        label: __('Smaller', 'clay'),
+        value: 'smaller'
       }, {
         label: __('Small', 'clay'),
         value: 'small'

@@ -76,12 +76,12 @@
 			"fontSizes": [
 				{
 					"slug": "logo",
-					"size": "1.8em",
+					"size": "38px",
 					"name": "Logo"
 				},
 				{
 					"slug": "heading-1",
-					"size": "3.1em",
+					"size": "68px",
 					"name": "Heading One"
 				},
 				{
@@ -91,17 +91,17 @@
 				},
 				{
 					"slug": "text-large",
-					"size": "1.6em",
+					"size": "32px",
 					"name": "Text Large"
 				},
 				{
 					"slug": "text-default",
-					"size": "1.3em",
+					"size": "20px",
 					"name": "Text Default"
 				},
 				{
 					"slug": "text-small",
-					"size": "1.1em",
+					"size": "19px",
 					"name": "Text Small"
 				},
 				{
