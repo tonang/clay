@@ -28,6 +28,11 @@
 					"slug": "gray-dark",
 					"color": "#545454",
 					"name": "Gray Dark"
+				},
+				{
+					"slug": "border-one",
+					"color": "rgba(153, 153, 153, 0.2)",
+					"name": "Border One"
 				}
 			],
 			"duotone": [

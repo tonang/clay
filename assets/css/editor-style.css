@@ -504,6 +504,24 @@ ul, ol {
   }
 }
 
+.wp-block-post-excerpt__more-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+  color: var(--wp--preset--color--white);
+  background-color: var(--wp--preset--color--gray);
+  padding: 12px 32px;
+  border-radius: 33px;
+  text-decoration: underline;
+  text-align: center;
+  min-width: 160px;
+}
+.wp-block-post-excerpt__more-link:hover, .wp-block-post-excerpt__more-link:focus {
+  color: var(--wp--preset--color--white);
+  text-decoration: none;
+}
+
 .wp-block-button__link {
   display: inline-block;
   font-size: var(--wp--preset--font-size--text-smallest);
@@ -521,12 +539,17 @@ ul, ol {
 form p + p {
   margin-top: 1rem;
 }
+form label {
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+}
 form label .required {
   color: red;
 }
 form input[type=text],
 form input[type=email],
 form input[type=url],
+form input[type=search],
 form textarea {
   width: 100%;
   padding: 18px 24px;
@@ -539,6 +562,8 @@ form input[type=email]:focus,
 form input[type=email]:active,
 form input[type=url]:focus,
 form input[type=url]:active,
+form input[type=search]:focus,
+form input[type=search]:active,
 form textarea:focus,
 form textarea:active {
   outline: none;
@@ -550,6 +575,74 @@ form textarea:active {
 }
 .comment-form .form-submit {
   margin-top: 42px;
+}
+
+@media screen and (max-width: 578px) {
+  .wp-block-search label {
+    text-align: center;
+    display: block;
+  }
+}
+.wp-block-search input[type=search] {
+  padding: 18px 24px !important;
+  border-top-left-radius: 33px;
+  border-bottom-left-radius: 33px;
+}
+@media screen and (max-width: 578px) {
+  .wp-block-search input[type=search] {
+    border-radius: 33px;
+  }
+}
+.wp-block-search__button {
+  border-top-right-radius: 33px;
+  border-bottom-right-radius: 33px;
+  min-width: 140px;
+  background-color: var(--wp--preset--color--black) !important;
+  color: var(--wp--preset--color--white) !important;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media screen and (max-width: 578px) {
+  .wp-block-search__button {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+    border-radius: 33px;
+    display: block;
+    margin-left: 0 !important;
+    margin-top: 12px !important;
+  }
+}
+.wp-block-search__button:hover, .wp-block-search__button:focus {
+  text-decoration: none;
+}
+@media screen and (max-width: 578px) {
+  .wp-block-search__inside-wrapper {
+    flex-flow: column nowrap;
+  }
+}
+
+.wp-block-query-pagination.site-main__loop-pagination {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous {
+  display: inline-block;
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+  color: var(--wp--preset--color--white);
+  background-color: var(--wp--preset--color--black);
+  padding: 12px 32px;
+  border-radius: 33px;
+  text-decoration: underline;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next:hover, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next:focus, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous:hover, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous:focus {
+  text-decoration: none;
 }
 
 /* ======================================================================== */
@@ -886,6 +979,17 @@ form textarea:active {
 .site-sidebar .wp-block-latest-comments__comment-date {
   margin-top: 8px;
   margin-bottom: 16px;
+}
+
+.site-main__archive-title ~ .site-main__loop,
+.site-main__archive-description ~ .site-main__loop {
+  padding-top: 75px;
+}
+@media screen and (max-width: 1024px) {
+  .site-main__archive-title ~ .site-main__loop,
+.site-main__archive-description ~ .site-main__loop {
+    padding-top: 40px;
+  }
 }
 
 .editor-styles-wrapper .wp-site-blocks > * + * {
