@@ -492,6 +492,18 @@ ul, ol {
   padding: 0 0 0 1rem;
 }
 
+.wp-block-quote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  border-left: 4px solid var(--wp--preset--color--black);
+}
+@media screen and (max-width: 1024px) {
+  .wp-block-quote {
+    padding-left: 24px;
+  }
+}
+
 .wp-block-button__link {
   display: inline-block;
   font-size: var(--wp--preset--font-size--text-smallest);
