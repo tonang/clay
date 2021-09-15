@@ -358,7 +358,7 @@ figure {
 }
 
 /* ======================================================================== */
-/* 03. General */
+/* 03. Global */
 /* ======================================================================== */
 html {
   font-size: var(--paragraph-max-font-size);
@@ -371,11 +371,8 @@ html {
 }
 
 body {
-  background-color: var(--wp--preset--color--white);
   width: 100%;
   word-wrap: break-word;
-  font-family: var(--wp--preset--font-family--roboto);
-  color: var(--wp--preset--color--gray-dark);
 }
 
 [class^=icon-]:before, [class*=" icon-"]:before {
@@ -385,11 +382,30 @@ body {
 a {
   text-decoration: none;
   transition: ease 0.3s;
-  color: var(--wp--preset--color--gray);
 }
 a:hover, a:focus {
   text-decoration: none;
-  color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--gray);
+}
+
+iframe {
+  border: none;
+  width: 100%;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+ul, ol {
+  list-style-position: outside;
+  list-style-type: square;
+  margin: 0;
+  padding: 0 0 0 1rem;
 }
 
 /* ======================================================================== */
@@ -403,7 +419,6 @@ h5,
 h6 {
   font-family: var(--wp--preset--font-family--roboto);
   font-weight: bold;
-  color: var(--wp--preset--color-black);
 }
 
 @media screen and (max-width: 1024px) {
@@ -412,10 +427,6 @@ h6 {
   }
 }
 
-p {
-  font-size: var(--wp--preset--font-size--text-default);
-  line-height: 1.8em;
-}
 @media screen and (max-width: 1024px) {
   p {
     font-size: 18px;
@@ -450,20 +461,9 @@ kbd {
   padding: 0.125em 0.25em;
 }
 
-iframe {
-  border: none;
-  width: 100%;
-}
-
-img, iframe {
-  max-width: 100%;
-}
-
-img {
-  height: auto;
-}
-
-/* Custom gutenberg wrapper */
+/* ======================================================================== */
+/* 05. Custom Gutenberg wrapper */
+/* ======================================================================== */
 .wp-block-columns.alignfull {
   max-width: 90vw !important;
 }
@@ -485,57 +485,9 @@ img {
   }
 }
 
-ul, ol {
-  list-style-position: outside;
-  list-style-type: square;
-  margin: 0;
-  padding: 0 0 0 1rem;
-}
-
-.wp-block-quote {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
-  border-left: 4px solid var(--wp--preset--color--black);
-}
-@media screen and (max-width: 1024px) {
-  .wp-block-quote {
-    padding-left: 24px;
-  }
-}
-
-.wp-block-post-excerpt__more-link {
-  display: inline-block;
-  margin-top: 32px;
-  font-size: var(--wp--preset--font-size--text-smallest);
-  font-weight: bold;
-  color: var(--wp--preset--color--white);
-  background-color: var(--wp--preset--color--gray);
-  padding: 12px 32px;
-  border-radius: 33px;
-  text-decoration: underline;
-  text-align: center;
-  min-width: 160px;
-}
-.wp-block-post-excerpt__more-link:hover, .wp-block-post-excerpt__more-link:focus {
-  color: var(--wp--preset--color--white);
-  text-decoration: none;
-}
-
-.wp-block-button__link {
-  display: inline-block;
-  font-size: var(--wp--preset--font-size--text-smallest);
-  font-weight: bold;
-  color: var(--wp--preset--color--white);
-  background-color: var(--wp--preset--color--gray);
-  padding: 19px 32px;
-  border-radius: 33px;
-  text-decoration: underline;
-}
-.wp-block-button__link:hover, .wp-block-button__link:focus {
-  text-decoration: none;
-}
-
+/* ======================================================================== */
+/* 06. Form */
+/* ======================================================================== */
 form p + p {
   margin-top: 1rem;
 }
@@ -622,6 +574,47 @@ form textarea:active {
   }
 }
 
+/* ======================================================================== */
+/* 07. Gutenberg overwrite block */
+/* ======================================================================== */
+/* Block - quote */
+.wp-block-quote {
+  border-left: 4px solid var(--wp--preset--color--black);
+}
+@media screen and (max-width: 1024px) {
+  .wp-block-quote {
+    padding-left: 24px;
+  }
+}
+
+/* Block - Excerpt */
+.wp-block-post-excerpt__more-link {
+  display: inline-block;
+  text-decoration: underline;
+  text-align: center;
+  min-width: 160px;
+}
+.wp-block-post-excerpt__more-link:hover, .wp-block-post-excerpt__more-link:focus {
+  color: var(--wp--preset--color--white);
+  text-decoration: none;
+}
+
+/* Block - button */
+.wp-block-button__link {
+  display: inline-block;
+  text-decoration: underline;
+  background: var(--wp--preset--color--gray);
+  color: var(--wp--preset--color--white);
+  border-radius: 33px;
+  padding: 19px 32px;
+  font-size: var(--wp--preset--font-size--text-smallest);
+  font-weight: bold;
+}
+.wp-block-button__link:hover, .wp-block-button__link:focus {
+  text-decoration: none;
+}
+
+/* Block - loop */
 .wp-block-query-pagination.site-main__loop-pagination {
   text-align: center;
   display: flex;
@@ -631,22 +624,14 @@ form textarea:active {
 }
 .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous {
   display: inline-block;
-  font-size: var(--wp--preset--font-size--text-smallest);
-  font-weight: bold;
-  color: var(--wp--preset--color--white);
-  background-color: var(--wp--preset--color--black);
-  padding: 12px 32px;
-  border-radius: 33px;
   text-decoration: underline;
-  margin-left: 8px;
-  margin-right: 8px;
 }
 .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next:hover, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-next:focus, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous:hover, .wp-block-query-pagination.site-main__loop-pagination .wp-block-query-pagination-previous:focus {
   text-decoration: none;
 }
 
 /* ======================================================================== */
-/* 05. Helper - Space */
+/* 08. Spacing */
 /* ======================================================================== */
 .has-space-top-smaller {
   padding-top: 40px;
@@ -697,7 +682,7 @@ form textarea:active {
   }
 }
 /* ======================================================================== */
-/* 06. Component - Site Header */
+/* 09. Site header */
 /* ======================================================================== */
 .site-header .wp-block-navigation-item__content {
   font-weight: bold;
@@ -746,7 +731,7 @@ form textarea:active {
 }
 
 /* ======================================================================== */
-/* 07. Component - Site Footer */
+/* 10. Site footer */
 /* ======================================================================== */
 .site-footer ul {
   list-style: none outside none;
@@ -777,6 +762,9 @@ form textarea:active {
   border-top: 1px solid rgba(153, 153, 153, 0.2);
 }
 
+/* ======================================================================== */
+/* 11. Site main */
+/* ======================================================================== */
 @media screen and (max-width: 782.99px) {
   .site-main__has-sidebar.wp-block-group > .wp-block-columns > .wp-block-column {
     flex-basis: 100% !important;
@@ -790,7 +778,7 @@ form textarea:active {
 }
 
 /* ======================================================================== */
-/* 08. Component - Site Article */
+/* 12. Site article */
 /* ======================================================================== */
 .site-article__featured-image.alignfull {
   max-width: 100% !important;
@@ -849,7 +837,6 @@ form textarea:active {
   color: var(--wp--preset--color--gray-dark) !important;
 }
 .site-article__post {
-  font-size: var(--wp--preset-fint-size--text-default);
   letter-spacing: 0;
 }
 .site-article__post a {
@@ -874,6 +861,9 @@ form textarea:active {
   display: none;
 }
 
+/* ======================================================================== */
+/* 13. Site comment */
+/* ======================================================================== */
 .site-comment .wp-block-post-comments h3 {
   font-size: var(--wp--preset--font-size--text-small);
 }
@@ -962,6 +952,9 @@ form textarea:active {
   color: var(--wp--preset--color--gray-dark);
 }
 
+/* ======================================================================== */
+/* 14. Site sidebar */
+/* ======================================================================== */
 .site-sidebar a {
   color: var(--wp--preset--color--gray-dark);
   text-decoration: underline;
@@ -981,6 +974,9 @@ form textarea:active {
   margin-bottom: 16px;
 }
 
+/* ======================================================================== */
+/* 15. Site archive */
+/* ======================================================================== */
 .site-main__archive-title ~ .site-main__loop,
 .site-main__archive-description ~ .site-main__loop {
   padding-top: 75px;
