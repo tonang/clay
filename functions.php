@@ -42,13 +42,8 @@ require_once 'inc/block-styles.php';
 require_once 'inc/block-patterns.php';
 
 // Block patterns - Header.
-require_once 'inc/block-patterns-header.php';
+// require_once 'inc/block-patterns-header.php';
 
-// Block patterns - Footer
-require_once 'inc/block-patterns-footer.php';
-
-// Block patterns - Page layout
-require_once 'inc/block-patterns-page-layout.php';
 
 // Enqueue gutenberg JS files to back-end editor.
 require_once 'inc/block-editor-assets.php';
