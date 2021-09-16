@@ -815,15 +815,8 @@ form textarea:active {
   padding-left: 0;
   margin-left: 0;
 }
-.site-article__meta > div.site-article__meta-tags {
-  padding-right: 0;
-  margin-right: 0;
-}
-.site-article__meta > div.site-article__meta-tags:after {
-  display: none;
-}
 .site-article__meta > div.site-article__meta-author:after {
-  top: -4px;
+  display: none;
 }
 .site-article__meta > div a {
   text-decoration: underline;
