@@ -4,11 +4,11 @@
 * 
 * @since 1.0.0
 */
-function clay_enqueue_styles(){
+function clayi_enqueue_styles(){
     wp_enqueue_style( 
-        'clay-style',
-        CLAY_THEME_STYLESHEET . '',
-        CLAY_VERSION
+        'clayi-style',
+        CLAYI_THEME_STYLESHEET . '',
+        CLAYI_VERSION
     );
 
 	wp_enqueue_style( 
@@ -19,12 +19,12 @@ function clay_enqueue_styles(){
 	);
 
     wp_enqueue_style(
-        'clay-main-style',
-        CLAY_THEME_URL . '/assets/css/main.css',
-        CLAY_VERSION
+        'clayi-main-style',
+        CLAYI_THEME_URL . '/assets/css/main.css',
+        CLAYI_VERSION
     );
 
     // Enqueue bloat gutenberg theme
     wp_dequeue_style( 'wp-block-library-theme' );
 }
-add_action( 'wp_enqueue_scripts', 'clay_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'clayi_enqueue_styles' );

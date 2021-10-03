@@ -2,11 +2,11 @@
 /**
 * Theme support
 * 
-* @package Clay
+* @package clayi
 * @since 1.0.0
 */
 
-namespace Clay;
+namespace clayi;
 
 /**
 * Add theme support
@@ -86,7 +86,7 @@ class Theme_Support {
 		// This variable is intended to be overruled from themes.
 		// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-		$GLOBALS['content_width'] = apply_filters( 'clay_content_width', 998 );
+		$GLOBALS['content_width'] = apply_filters( 'clayi_content_width', 998 );
     }
 }
 

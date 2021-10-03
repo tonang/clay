@@ -862,7 +862,7 @@ var addClassSpacingColumnsAttribute = function addClassSpacingColumnsAttribute(s
   return settings;
 };
 
-addFilter('blocks.registerBlockType', 'clay/class-columns/add-class-spacing-columns-attribute', addClassSpacingColumnsAttribute);
+addFilter('blocks.registerBlockType', 'clayi/class-columns/add-class-spacing-columns-attribute', addClassSpacingColumnsAttribute);
 /**
 * Add class control to inspector 
 */
@@ -880,25 +880,25 @@ var addClassSpacingColumnsInspectorControl = createHigherOrderComponent(function
     }
 
     return React.createElement(Fragment, null, React.createElement(BlockEdit, props), React.createElement(InspectorControls, null, React.createElement(PanelBody, {
-      title: __('Group Space Options', 'clay'),
+      title: __('Group Space Options', 'clayi'),
       initialOpen: true
     }, React.createElement(SelectControl, {
-      label: __('Space top', 'clay'),
+      label: __('Space top', 'clayi'),
       value: classSpaceTop,
       options: [{
-        label: __('Default', 'clay'),
+        label: __('Default', 'clayi'),
         value: ''
       }, {
-        label: __('Smaller', 'clay'),
+        label: __('Smaller', 'clayi'),
         value: 'smaller'
       }, {
-        label: __('Small', 'clay'),
+        label: __('Small', 'clayi'),
         value: 'small'
       }, {
-        label: __('Medium', 'clay'),
+        label: __('Medium', 'clayi'),
         value: 'medium'
       }, {
-        label: __('Large', 'clay'),
+        label: __('Large', 'clayi'),
         value: 'large'
       }],
       onChange: function onChange(value) {
@@ -907,22 +907,22 @@ var addClassSpacingColumnsInspectorControl = createHigherOrderComponent(function
         });
       }
     }), React.createElement(SelectControl, {
-      label: __('Space bottom', 'clay'),
+      label: __('Space bottom', 'clayi'),
       value: classSpaceBottom,
       options: [{
-        label: __('Default', 'clay'),
+        label: __('Default', 'clayi'),
         value: ''
       }, {
-        label: __('Smaller', 'clay'),
+        label: __('Smaller', 'clayi'),
         value: 'smaller'
       }, {
-        label: __('Small', 'clay'),
+        label: __('Small', 'clayi'),
         value: 'small'
       }, {
-        label: __('Medium', 'clay'),
+        label: __('Medium', 'clayi'),
         value: 'medium'
       }, {
-        label: __('Large', 'clay'),
+        label: __('Large', 'clayi'),
         value: 'large'
       }],
       onChange: function onChange(value) {
@@ -933,7 +933,7 @@ var addClassSpacingColumnsInspectorControl = createHigherOrderComponent(function
     }))));
   };
 }, 'addClassSpacingColumnsInspectorControl');
-addFilter('editor.BlockEdit', 'clay/class-columns/add-class-spacing-columns-inspector-control', addClassSpacingColumnsInspectorControl);
+addFilter('editor.BlockEdit', 'clayi/class-columns/add-class-spacing-columns-inspector-control', addClassSpacingColumnsInspectorControl);
 /**
 * Add class to the block in the editor
 */
@@ -955,7 +955,7 @@ var addClassSpacingColumnsEditorInspectorControl = createHigherOrderComponent(fu
     }));
   };
 }, 'addClassSpacingColumnsEditorInspectorControl');
-addFilter('editor.BlockListBlock', 'clay/class-columns/add-class-spacing-columns-editor-inspector-control', addClassSpacingColumnsEditorInspectorControl);
+addFilter('editor.BlockListBlock', 'clayi/class-columns/add-class-spacing-columns-editor-inspector-control', addClassSpacingColumnsEditorInspectorControl);
 /**
 * Add class to the block in the front-end
 */
@@ -974,7 +974,7 @@ function addClassSpacingColumnsFrontend(props, blockType, attributes) {
   });
 }
 
-addFilter('blocks.getSaveContent.extraProps', 'clay/class-columns/add-class-spacing-columns-frontend', addClassSpacingColumnsFrontend);
+addFilter('blocks.getSaveContent.extraProps', 'clayi/class-columns/add-class-spacing-columns-frontend', addClassSpacingColumnsFrontend);
 },{"classnames":"../../node_modules/classnames/index.js","lodash.assign":"../../node_modules/lodash.assign/index.js"}],"extend-gutenberg.js":[function(require,module,exports) {
 "use strict";
 

@@ -4,7 +4,7 @@
 * 
 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 *
-* @package Clay
+* @package clayii
 * @since 1.0.0
 */
 
@@ -13,15 +13,15 @@
 * 
 * @since 1.0.0
 */
-define( 'CLAY_VERSION', wp_get_theme()->get( 'Version' ) );
-define( 'CLAY_THEME_PATH', get_template_directory() );
-define( 'CLAY_THEME_URL', get_template_directory_uri() );
-define( 'CLAY_THEME_STYLESHEET', get_stylesheet_uri() );
-define( 'CLAY_THEME_IMAGE', CLAY_THEME_URL . '/assets/images' );
+define( 'CLAYI_VERSION', wp_get_theme()->get( 'Version' ) );
+define( 'CLAYI_THEME_PATH', get_template_directory() );
+define( 'CLAYI_THEME_URL', get_template_directory_uri() );
+define( 'CLAYI_THEME_STYLESHEET', get_stylesheet_uri() );
+define( 'CLAYI_THEME_IMAGE', CLAYI_THEME_URL . '/assets/images' );
 
 /* Check if the WordPress version is 5.5 or higher, and if the PHP version is at least 7.2. If not do not activate */
 if ( version_compare( $GLOBALS['wp_version'], '5.5', '<' ) || version_compare( PHP_VERSION_ID, '70200', '<' ) ) {
-    require CLAY_THEME_PATH . '/inc/back-compat.php';
+    require CLAYI_THEME_PATH . '/inc/back-compat.php';
 
     return;
 }

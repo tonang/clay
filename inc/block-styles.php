@@ -2,6 +2,6 @@
 /**
 * Block styles.
 * 
-* @package Clay
+* @package clayi
 * @since 1.0.0
 */

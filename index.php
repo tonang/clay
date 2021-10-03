@@ -2,5 +2,5 @@
 /**
 * Without this file, WordPress will consider the theme broken.
 * 
-* @package clay
+* @package clayi
 **/

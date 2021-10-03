@@ -1,14 +1,14 @@
 <?php 
 /**
-* Clay Admin class
+* clayi Admin class
 * 
 * Adds a theme about page to the WordPress admin area
 *
-* @package Clay
+* @package clayi
 * @since 1.0.0
 */
 
-namespace Clay;
+namespace clayi;
 
 /**
 * Admin Theme about page
@@ -36,10 +36,10 @@ class AboutPage {
     */
     public function action_admin_page_menu() {
         add_theme_page( 
-            __( 'Clay Setup Help', 'clay' ), 
-            __( 'Clay Setup Help', 'clay' ), 
+            __( 'clayi Setup Help', 'clayi' ), 
+            __( 'clayi Setup Help', 'clayi' ), 
             'edit_theme_options', 
-            'clay_theme', 
+            'clayi_theme', 
             [ $this, 'docs' ] 
         ); 
     }
@@ -57,9 +57,9 @@ class AboutPage {
             <div class="wrap">
                 <div class="welcome-panel">
                     <div class="welcome-panel-content">
-                        <h1><?php esc_html_e( 'Clay Setup Help', 'clay' ); ?></h1><br>
-                        <?php esc_html_e( 'Clay is an experimental full site editing theme.', 'clay' ); ?><br>
-                        <?php esc_html_e( 'Templates, block patterns and block styles may change in future versions.', 'clay' ); ?><br><br>
+                        <h1><?php esc_html_e( 'clayi Setup Help', 'clayi' ); ?></h1><br>
+                        <?php esc_html_e( 'clayi is an experimental full site editing theme.', 'clayi' ); ?><br>
+                        <?php esc_html_e( 'Templates, block patterns and block styles may change in future versions.', 'clayi' ); ?><br><br>
                     </div>
                 </div>
             </div>

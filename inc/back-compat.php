@@ -2,7 +2,7 @@
 /**
  * Backwards compatibility
  *
- * @package Clay
+ * @package clayi
  * @since 1.0.0
  */
 
@@ -14,12 +14,12 @@
  * @since 1.0.0
  * @return void
  */
-function clay_switch_theme() {
+function clayi_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME );
 	unset( $_GET['activated'] );
-	add_action( 'admin_notices', 'clay_upgrade_notice' );
+	add_action( 'admin_notices', 'clayi_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'clay_switch_theme' );
+add_action( 'after_switch_theme', 'clayi_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -31,9 +31,9 @@ add_action( 'after_switch_theme', 'clay_switch_theme' );
  * @global string $wp_version WordPress version.
  * @return void
  */
-function clay_upgrade_notice() {
+function clayi_upgrade_notice() {
 	/* translators: %1$s: WordPress version. %2$s PHP version.*/
-	$message = sprintf( esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clay' ), $GLOBALS['wp_version'], PHP_VERSION );
+	$message = sprintf( esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clayi' ), $GLOBALS['wp_version'], PHP_VERSION );
 	printf( '<div class="error"><p>%s</p></div>', $message ); // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
@@ -45,11 +45,11 @@ function clay_upgrade_notice() {
  * @global string $wp_version WordPress version.
  * @return void
  */
-function clay_customize() {
+function clayi_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %1$s: WordPress version. %2$s PHP version.*/
-			esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clay' ),
+			esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clayi' ),
 			esc_html( $GLOBALS['wp_version'] ),
 			esc_html( PHP_VERSION )
 		),
@@ -59,7 +59,7 @@ function clay_customize() {
 		]
 	);
 }
-add_action( 'load-customize.php', 'clay_customize' );
+add_action( 'load-customize.php', 'clayi_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.5.
@@ -69,16 +69,16 @@ add_action( 'load-customize.php', 'clay_customize' );
  * @global string $wp_version WordPress version.
  * @return void
  */
-function clay_preview() {
+function clayi_preview() {
 	if ( isset( $_GET['preview'] ) ) {
 		wp_die(
 			sprintf(
 				/* translators: %1$s: WordPress version. %2$s PHP version.*/
-				esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clay' ),
+				esc_html__( 'This theme requires at least WordPress version 5.5 and PHP version 7.2. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'clayi' ),
 				esc_html( $GLOBALS['wp_version'] ),
 				esc_html( PHP_VERSION )
 			)
 		);
 	}
 }
-add_action( 'template_redirect', 'clay_preview' );
+add_action( 'template_redirect', 'clayi_preview' );
