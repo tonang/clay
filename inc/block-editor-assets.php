@@ -6,17 +6,17 @@
 function clayi_block_editor_assets(){
 	wp_enqueue_script(
 		'clayi-extend-gutenberg',
-		clayi_THEME_URL . '/assets/js/extend-gutenberg.js',
+		CLAYI_THEME_URL . '/assets/js/extend-gutenberg.js',
 		array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'),
-		filemtime( clayi_THEME_PATH . '/assets/js/extend-gutenberg.js'),
+		filemtime( CLAYI_THEME_PATH . '/assets/js/extend-gutenberg.js'),
 		true
 	);
 
 	wp_enqueue_script( 
 		'clayi-theme-editor', 
-		clayi_THEME_URL . '/assets/js/editor.js',
+		CLAYI_THEME_URL . '/assets/js/editor.js',
 		array('wp-blocks', 'wp-dom'),
-		filemtime( clayi_THEME_PATH . '/assets/js/editor.js' ), 
+		filemtime( CLAYI_THEME_PATH . '/assets/js/editor.js' ), 
 		true
 	);
 
