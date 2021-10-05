@@ -1,23 +1,17 @@
 /*
-Theme Name: clayi
-Author: Rizwan Aritonang
-Author URI: https://juantonang.com
-Theme URI: https://github.com/tonang/clay
-Version: 1.0.0
-Description: An experimental full site editing theme for blogs. This theme requires Gutenberg version 10.6 or newer. clayi includes multiple block styles and block patterns including site headers, site footers and page layouts.
-Tags: full-site-editing, blog, one-column, two-columns, editor-style.
-Text Domain: clayi
-Requires at least: 5.5
-Requires PHP: 7.2
-Tested up to: 5.8
-
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-All files, unless otherwise stated, are released under the GNU General Public
-License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+Theme Name:         Clayi
+Theme URI:          https://clayi.juantonang.com/
+Author:             Rizwan Aritonang
+Author URI:         https://juantonang.com
+Tested up to:       5.8
+Requires PHP:       7.2
+Description:        An experimental full site editing theme for blogs. This theme requires Gutenberg version 10.6 or newer. clayi includes multiple block styles and block patterns including site headers, site footers and page layouts.
+Version:            1.0.0
+License:            GNU General Public License v2 or later
+License URI:        https://www.gnu.org/licenses/gpl-2.0.html  
+Text Domain:        clayi
+Tags: full-site-editing, blog, one-column, two-columns, block-styles
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned 
-with others.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
