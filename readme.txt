@@ -17,8 +17,12 @@ Name inspired from my little one name Clairine -> clay. but Clay is exist in the
 == To do ==
 
 == Changelog ==
-* October 5, 2021
-Initial Release
+* October 5, 2021 Version: 1.1
+Register new block style for core/paragraph
+Updated screenshot.
+
+* October 3, 2021
+Initial Release.
 
 == Copyright ==
 
